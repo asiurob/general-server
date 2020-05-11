@@ -4,8 +4,8 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import Database from './classes/database'
 import fileUpload from 'express-fileupload'
-import InvoiceRoute from './routes/invoice.route'
 
+import fooRoute from './routes/foo.route'
 
 //Declaraciones
 const server   = Server.instance
@@ -20,7 +20,7 @@ server.app.use( fileUpload() )
 server.app.use( cors( { origin: true, credentials: true } ) )
 
 //Rutas
-server.app.use('/invoice', InvoiceRoute )
+server.app.use('/foo', fooRoute )
 
 //Iniciar el servidor
 server.start( () => {
